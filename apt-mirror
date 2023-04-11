@@ -888,7 +888,7 @@ sub process_index
                 add_url_to_download( $uri . "/" . $lines{"Filename:"}, $lines{"Size:"} );
             }
         }
-        else
+        elsif ( exists $lines{"Files:"} )
         {    # Sources index
             foreach ( split( /\n/, $lines{"Files:"} ) )
             {
